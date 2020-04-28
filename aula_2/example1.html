@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Diretivas</title>
+</head>
+<body>
+    <!--
+        As diretivas serve basicamente como funções dentro das tags, existem diretivas padrões do próprio vue,
+        como é o caso das: v-if, v-show, v-for etc.
+    -->
+    <div id="app">
+        <p v-if="condicao">{{texto}}</p>
+        <!--O que acontece aqui, é que o vue viu que existe um if e fez uma condição-->
+        <p v-else>{{senao}}</p>
+    </div>
+
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                // No caso, a condição está false, então o v-if não irá renderizar o texto.
+                // A diferença entre o v-if e o v-show é que o v-show irá renderizar o componente mas com o display:none;
+                condicao: false,
+                texto: 'breno',
+                senao: 'Não existe texto',
+            }
+        })
+    </script>
+
+    
+</body>
+</html>

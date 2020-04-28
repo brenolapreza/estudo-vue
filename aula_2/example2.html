@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Diretivas</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1>{{titulo}}</h1>
+        <div v-if="pessoa.id == 1">
+            <p>{{pessoa.nome}}</p>
+            <p>{{pessoa.idade}}</p>
+            <p>{{pessoa.profissao}}</p>
+        </div>
+        <div v-else>Nenhuma pessoa com o id = 1.</div>
+    </div>
+
+
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                titulo: 'Pessoa',
+                pessoa: {
+                    id: 2,
+                    nome: 'Breno',
+                    idade: 20,
+                    profissao: 'Programador Frontend',
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
