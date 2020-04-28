@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 1</title>
+</head>
+<body>
+
+    <div id="app">
+        <h1>{{message}}</h1>
+    </div>
+
+    <!--Incluido o VUE no index.html-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script>
+    /*instanciando o vue*/
+    var app = new Vue({
+        /*el = elemento*/
+        el: '#app',
+        data: {
+            message: 'Ola'
+        }
+
+    })
+    
+    </script>
+
+</body>
+</html>
