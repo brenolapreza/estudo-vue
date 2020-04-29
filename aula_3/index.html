@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Models</title>
+</head>
+
+<body>
+    <div id="app">
+
+        <!--O é mais utilizado para formularios, inputs e textarea-->
+        <label for="">Nome: </label>
+        <input v-model="nome" type="text" placeholder="Nome: ">
+        </br></br>
+
+        <label for="">Linguagens Preferidas</label><br>
+        <input v-model="linguagens" value="Python" type="checkbox" id="">Python<br>
+        <input v-model="linguagens" value="Javascript" type="checkbox" id="">Javascript<br>
+        <input v-model="linguagens" value="Java" type="checkbox" id="">Java<br>
+        <input v-model="linguagens" value="PHP" type="checkbox" id="">PHP<br>
+        <br><br>
+
+        <label for="">Você gosta de JavaScript?</label></br>
+        <input type="radio" v-model="gosta" value="Sim"> Sim<br>
+        <input type="radio" v-model="gosta" value="Não"> Não<br>
+        <br><br>
+
+        <label for="">Como nos conheceu?</label>
+        <select name="" id="" v-model="conheceu">
+            <option value="Google">Google</option>
+            <option value="Facebook">Facebook</option>
+            <option value="Youtube">YouTube</option>
+            <option value="Orkut">Orkut</option>
+        </select>
+        <br><br>
+
+        <hr>
+
+        <div>
+            <p>Nome: {{nome}}</p>
+            <p>Linguagens Preferidas: {{linguagens}}</p>
+            <p>Gosta de JavaScript: {{gosta}}</p>
+            <p>Como nos Conheceu: {{conheceu}}</p>
+        </div>
+    </div>
+
+
+
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                nome: "",
+                linguagens: [],
+                gosta: '',
+                conheceu: '',
+            }
+        })
+    </script>
+</body>
+
+</html>
