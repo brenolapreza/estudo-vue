@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>v-bind</title>
+    <!--CSS ADICIONAL-->
+    <style>
+        .corUm{background-color:#8888cc; padding: 20px;}
+        .corDois{background-color:#fff88c; padding: 20px;}
+    </style>
+</head>
+<body>
+ 
+    <div id="app">
+        <!--O v-bind serve para setar um atributo html utilizando o vue-->
+        <img v-bind:src="scr" :align="alinhamento" :class="cor">
+        <!--Pode se usar o v-bind com dois pontos tambem :-->
+    </div>
+
+
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                scr: 'https://cdn.pixabay.com/photo/2016/01/19/17/15/wind-turbine-1149604_960_720.jpg',
+                alinhamento: 'right',
+                cor: 'corDois'
+            }
+        })
+    </script>
+</body>
+</html>
